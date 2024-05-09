@@ -11,13 +11,15 @@
 <body>
 <script src="anime.min.js"></script>
 <script>
-  anime({
-    targets: 'div',
-    translateX: 250,
-    rotate: '1turn',
-    backgroundColor: '#FFF',
-    duration: 8000
-  })
+anime({
+  targets: '.line-drawing-demo .lines path',
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: 'easeInOutSine',
+  duration: 1500,
+  delay: function(el, i) { return i * 250 },
+  direction: 'alternate',
+  loop: true
+});
 </script>
 
 </body>
