@@ -17,7 +17,7 @@ Highcharts.setOptions({
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-    const chart = Highcharts.chart('weekly-chart', {
+    const chart = Highcharts.chart('weekly-graph', {
         chart: {
             type: 'line'
         },
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-    const chart = Highcharts.chart('monthly-chart', {
+    const chart = Highcharts.chart('monthly-graph', {
         chart: {
             type: 'line'
         },
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 document.addEventListener('DOMContentLoaded', function () {
-    const chart = Highcharts.chart('yearly-chart', {
+    const chart = Highcharts.chart('yearly-graph', {
         chart: {
             type: 'line'
         },
