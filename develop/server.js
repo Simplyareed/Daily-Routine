@@ -8,6 +8,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+const APIRoute = require ('develop/public/js/api.js')
+
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
