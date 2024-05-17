@@ -1,6 +1,9 @@
 const express = require('express');
 const session = require('express-session');
 const routes = require('./routes');
+const exphbs = require('express-handlebars');
+const path = require('path');
+
 
 const sequelize = require('./connections/connections');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -20,6 +23,14 @@ const sess = {
   })
 };
 
+const hbs = exphbs.create({
+});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+app.set('views', path.join(__dirname, 'views'));
+
+
 app.use(session(sess));
 
 app.use(express.json());
@@ -29,8 +40,10 @@ app.use(routes);
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'))
+  res.render('dashboard', { title: 'Dashboard' });
 });
+
+// make more get request and renders per the url's
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
