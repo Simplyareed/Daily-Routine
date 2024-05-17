@@ -9,29 +9,27 @@ const nutritionSearchBox = document.querySelector('.nutrition-search input');
 const bodyPartBtn = document.querySelector('.body-part');
 const nutritionSearchBtn = document.querySelector('.nutrition-search button');
 
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'db90687ecfmshf2ae528d89c708bp1607d4jsndaf6fe1c5257',
-		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-	}
-};
-
 async function findExercise(bodyPart) {
-    const response = await fetch(exerciseURL + bodyPart, options);
+    const options = {
+        method: 'POST',
+        url: '/api/searchexerciseforbodypart',
+        params: {
+            limit: '0',
+            // offset: '0',
+            bodyPart
+        }
+    };
 
-    if (response.status == 404) {
-        document.querySelector('.exercise-error').style.display = 'block';
-    } else {
-        let data = await response.json();
-        let results = data.results;
-
-        console.log(results);
+    try {
+        const response = await axios.request(options);
+        console.log(response.data);
+    } catch (error) {
+        console.error(error);
     }
 }
 
 bodyPartBtn.addEventListener('click', (event) => {
     event.preventDefault();
     console.log(event.target.textContent.toLowerCase());
-    findExercise(event.target.textContent.toLowerCase());
+    findExercise(event.target.textContent);
 })
