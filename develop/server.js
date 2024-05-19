@@ -39,8 +39,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 app.use(express.static('public'))
 
+// app.get('/', (req, res) => {
+//   res.render('dashboard', { title: 'Dashboard' });
+// });
+
 app.get('/', (req, res) => {
-  res.render('dashboard', { title: 'Dashboard' });
+  res.render('login', { title: 'Login Page' });
 });
 
 // make more get request and renders per the url's

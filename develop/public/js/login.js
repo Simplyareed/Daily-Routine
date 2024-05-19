@@ -33,6 +33,8 @@ signupForm.addEventListener('submit', (event) => {
 
   const email = document.querySelector('#signup-email').value;
   const password = document.querySelector('#signup-password').value;
+  console.log(email + 'Stored email');
+  console.log(password + 'Stored pw');
 
   fetch('/api/signup', {
     method: 'POST',
