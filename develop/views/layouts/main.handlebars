@@ -16,7 +16,22 @@
           <li href="/">Home</li>
           <li href="/">Profile</li>
         </ul>
+         <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
     </div>
+
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+
+
+
 
     <div class="footer">
       <h2>Our GitHub Pages</h2>
