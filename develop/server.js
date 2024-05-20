@@ -56,6 +56,7 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login', { title: 'Login Page' });
+});
 
 // app.get('/', (req, res) => {
 //   res.render('login', { title: 'Login Page' });
