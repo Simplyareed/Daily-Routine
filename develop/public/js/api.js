@@ -6,7 +6,7 @@ const exerciseURL = 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/';
 
 //DOM elements
 const bodyPartBtn = document.querySelector('.body-part');
-const backBtn = document.querySelector('.back');
+const backBtn = document.querySelector('.back-btn');
 
 let part;
 

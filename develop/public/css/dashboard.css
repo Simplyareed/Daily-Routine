@@ -6,10 +6,6 @@ h2 {
     color: white;
 }
 
-.weekly-graph, .monthly-graph, .yearly-graph {
-    width: 100%;
-}
-
 .exercise {
     text-align: center;
     width: 100%;
@@ -86,4 +82,26 @@ h2 {
 
 button:hover {
     background-color: rgb(0, 99, 129);
+}
+
+.tracker {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #4f9e9e;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.weekly-graph {
+    width: 100%;
+}
+
+#chart {
+    display: flex;
+    margin: 58px;
+    width: 80%;
+    border-radius: 10px;
+
 }
