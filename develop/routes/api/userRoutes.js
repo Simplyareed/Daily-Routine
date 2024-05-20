@@ -1,8 +1,27 @@
 const express = require('express');
+const {User} = require('../../models');
 
 const router = express.Router();
 
 // Define your user routes here
+
+router.post('/', async (req, res) => {
+    try {
+        console.log("before user create");
+      const userData = await User.create(req.body);
+        console.log("after user creation");
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.loggedIn = true;
+  
+        res.status(200).json(userData);
+      });
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+  
+  
 
 router.get('/users', (req, res) => {
     // Logic to handle GET request for all users
@@ -30,22 +49,22 @@ router.get('/users/:id', (req, res) => {
         });
 });
 
-router.post('/users', (req, res) => {
-    // Logic to handle POST request to create a new user
-    const newUser = new User({
-        // Extract user data from request body
-        // and assign it to newUser object properties
-        // Example: name: req.body.name
-    });
+// router.post('/users', (req, res) => {
+//     // Logic to handle POST request to create a new user
+//     const newUser = new User({
+//         // Extract user data from request body
+//         // and assign it to newUser object properties
+//         // Example: name: req.body.name
+//     });
 
-    newUser.save()
-        .then(user => {
-            res.status(201).json(user);
-        })
-        .catch(err => {
-            res.status(500).json({ error: err });
-        });
-});
+//     newUser.save()
+//         .then(user => {
+//             res.status(201).json(user);
+//         })
+//         .catch(err => {
+//             res.status(500).json({ error: err });
+//         });
+// });
 
 router.put('/users/:id', (req, res) => {
     // Logic to handle PUT request to update a specific user
