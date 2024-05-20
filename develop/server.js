@@ -39,19 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 app.use(express.static('public'))
 
-<<<<<<< HEAD
-// Use the API routes
-// app.use('/api', apiRoutes);
-
-// app.get('/dashboard', (req, res) => {
-//   res.render('dashboard', { title: 'Dashboard' });
-// });
-
-=======
 app.get('/', (req, res) => {
   res.render('dashboard', { title: 'Dashboard' });
 });
->>>>>>> 41add557a77bbf1138583edc6db520b32a2b79cd
 
 app.get('/dashboard', (req, res) => {
   if (!req.session.loggedIn) {
