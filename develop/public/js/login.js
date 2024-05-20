@@ -39,20 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const email = document.querySelector('#signup-email').value;
       const password = document.querySelector('#signup-password').value;
+      const name = document.querySelector('#name-signup').value;
 
       console.log(email + ' Stored email');
       console.log(password + ' Stored pw');
 
-      fetch('/api/signup', {
+      fetch('/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, name }),
       })
         .then((response) => response.json())
         .then((data) => {
-          if (data.success) {
+          console.log(data);
+          if (data) {
             window.location.href = '/dashboard';
           } else {
             alert('Signup failed');
