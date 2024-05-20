@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.querySelector('#login-email').value;
       const password = document.querySelector('#login-password').value;
 
-      fetch('/api/login', {
+      fetch('/api/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          if (data.success) {
+          if (data.user) {
             window.location.href = '/dashboard';
           } else {
             alert('Invalid credentials');

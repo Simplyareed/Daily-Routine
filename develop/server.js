@@ -40,7 +40,7 @@ app.use(routes);
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-  res.render('dashboard', { title: 'Dashboard' });
+  res.render('login', { title: 'login' });
 });
 
 app.get('/dashboard', (req, res) => {
