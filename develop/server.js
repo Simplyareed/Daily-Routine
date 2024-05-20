@@ -39,13 +39,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 app.use(express.static('public'))
 
-// Use the API routes
-app.use('/api', apiRoutes);
-
-// app.get('/dashboard', (req, res) => {
-//   res.render('dashboard', { title: 'Dashboard' });
-// });
-
+app.get('/', (req, res) => {
+  res.render('dashboard', { title: 'Dashboard' });
+});
 
 app.get('/dashboard', (req, res) => {
   if (!req.session.loggedIn) {
@@ -56,14 +52,11 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login', { title: 'Login Page' });
+});
 
 // app.get('/', (req, res) => {
-//   res.render('login', { title: 'Login Page' });
+//   res.render('profile', { title: 'Profile' });
 // });
-
-app.get('/', (req, res) => {
-  res.render('profile', { title: 'Profile' });
-});
 
 // make more get request and renders per the url's
 

@@ -11,18 +11,15 @@
 </head>
 <body>
     <div class="navbar">
-      <h1>Welcome to the Dashboard</h1>
-        <ul>
-          <li href="/">Home</li>
-          <li href="/">Profile</li>
-        </ul>
-         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+      <h1>Exercise Tracker</h1>
+      <button href="/dashboard" class="home">Home</button>
+       <!-- Conditionally render login or logout links -->
+      {{#if logged_in}}
+      <button href="/profile" class="profile">Profile</button>
+      <button class="no-button" id="logout" class="logout">Logout</button>
+      {{else}}
+      <button href="/login" class="login">Login</button>
+      {{/if}}
     </div>
 
     <main class="container container-fluid mt-5">
