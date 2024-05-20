@@ -9,14 +9,15 @@ body {
 
 .navbar {
     background-color: #004d78;
-    overflow: hidden;
     color: #FAF9F6;
 }
 
-.navbar li {
-    float: left;
-    display: inline;
-    padding: 20px;
+.navbar button {
+    background-color: #4f9e9e;
+    border-radius: 15px;
+    border-style: none;
+    color: white;
+    padding: 10px;
 }
 
 .footer {
@@ -25,13 +26,19 @@ body {
     justify-content: center;
 }
 
+.footer h3 {
+    margin: 10px;
+    margin-left: 140px;
+    text-decoration: underline;
+}
+
 .footer a {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
-a.button {
-    background-color: #04AA6D; /* Green */
+.footer .button {
+    background-color: #4f9e9e;
     border: 5px;
     border-radius: 10px;
     color: black;
@@ -42,4 +49,21 @@ a.button {
     box-shadow: 10px color black;
     font-size: 16px;
     justify-content: center;
+    text-decoration: none;
+    margin: 15px;
+  }
+
+  .login, .logout {
+    margin: 20px;
+    margin-right: 100px;
+  }
+
+  .profile {
+    margin: 0px;
+  }
+
+  .home {
+    position: absolute;
+    left: 1800px;
+    margin: 20px;
   }

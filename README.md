@@ -2,21 +2,21 @@
 
 ## Description:
 
-This application was built to help users create an exercise routine that works best for them. Our motivation behind this project was a desire to hone our skills utilizing APIs, JavaScript, Handlebars, as well as the desire to aid people in implementing exercise into their lives to better their physical and mental health.
+This application was built to help users create an exercise routine that works best for them and to measure their productivity. Our motivation behind this project was a desire to hone our skills utilizing APIs, JavaScript, Handlebars, as well as the desire to aid people in implementing exercise into their lives to better their physical and mental health.
 
 ## User story:
 
-As a user, I want to utilize an exercise routine application to manage my tasks efficiently as well as maintain productivity, update details, adjust priorities, and optimize my productivity throughout the day.
+As a user, I want to utilize an exercise routine application to manage my workouts efficiently as well as maintain productivity, update details, adjust exercise routines, and update my productivity throughout the day.
 
 ## Acceptance Criteria:
 
 The login form should allow me to enter my email and password.
 
-Upon successful login, I should be redirected to my dashboard.
+Upon successful login, I should be redirected to my exercise routine dashboard.
 
 Incorrect login attempts should display appropriate error messages.
 
-The dashboard should display a list of tasks for the current day.
+The dashboard should display a list of body parts and as I click on them, I should receive recommended workouts for the current day.
 
 ## Installation:
 
