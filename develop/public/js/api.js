@@ -2,12 +2,13 @@
 // const exerciseApiKey = 'db90687ecfmshf2ae528d89c708bp1607d4jsndaf6fe1c5257';
 // const nutritionApiKey = 'RCctb1uzIlIsdqMygA0cvkrIidpuxY395uGjks6m';\
 const exerciseURL = 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/';
+// const axios = require('axios');
 
 //DOM elements
-const exerciseSearchBox = document.querySelector('.exercise-serch input');
-const nutritionSearchBox = document.querySelector('.nutrition-search input');
 const bodyPartBtn = document.querySelector('.body-part');
-const nutritionSearchBtn = document.querySelector('.nutrition-search button');
+const backBtn = document.querySelector('.back');
+
+let part;
 
 async function findExercise(bodyPart) {
     const options = {
@@ -22,7 +23,20 @@ async function findExercise(bodyPart) {
 
     try {
         const response = await axios.request(options);
-        console.log(response.data);
+
+        let results = response.data;
+        let selection = results[0];
+        console.log(selection);
+
+        document.querySelector('.exercise-name').innerHTML = selection.name;
+        document.querySelector('.exercise-target').innerHTML = selection.target;
+        document.querySelector('.exercise-equipment').innerHTML = selection.equipment;
+        document.querySelector('.exercise-description').innerHTML = selection.instructions;
+        document.querySelector('.exercise-gif').src = selection.gifUrl;
+
+        document.querySelector('.body-part').style.display = 'none';
+        document.querySelector('.one-exercise').style.display = 'block';
+
     } catch (error) {
         console.error(error);
     }
@@ -30,6 +44,13 @@ async function findExercise(bodyPart) {
 
 bodyPartBtn.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(event.target.textContent.toLowerCase());
+    console.log(event.target.textContent);
+    part = event.target.textContent;
     findExercise(event.target.textContent);
+})
+
+backBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.querySelector('.one-exercise').style.display = 'none';
+    document.querySelector('.body-part').style.display = 'flex';
 })
