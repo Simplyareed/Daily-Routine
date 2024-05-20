@@ -39,13 +39,27 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
+// Use the API routes
+app.use('/api', apiRoutes);
+
+// app.get('/dashboard', (req, res) => {
+//   res.render('dashboard', { title: 'Dashboard' });
+// });
+
+
+app.get('/dashboard', (req, res) => {
+  if (!req.session.loggedIn) {
+    return res.redirect('/login');
+  }
   res.render('dashboard', { title: 'Dashboard' });
 });
 
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
   res.render('login', { title: 'Login Page' });
-});
+
+// app.get('/', (req, res) => {
+//   res.render('login', { title: 'Login Page' });
+// });
 
 app.get('/', (req, res) => {
   res.render('profile', { title: 'Profile' });
