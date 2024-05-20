@@ -26,9 +26,15 @@ If you would like to run this application locally, simply clone this repository 
 
 In order to run this application locally, please utilize the npm run command.
 
---insert screenshot
+![dashboard](https://github.com/Simplyareed/Daily-Routine/assets/130515437/f0c7fc6b-84f3-41ab-b413-a744d2cf2af8)
 
 ## Credits: 
+
+APIs used:
+
+[Highcharts](https://www.highcharts.com/certificate/education/)
+
+[Exercise](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb/details)
 
 This project would not have been possible without the aid of each group member. Their respective GitHub profiles are linked below:
 
@@ -37,6 +43,8 @@ This project would not have been possible without the aid of each group member. 
 [Zoe](https://github.com/zoellaphine)
 
 [Jamie](https://github.com/JamieThompson101)
+
+We also wanted to give a huge shoutout to Juan for helping us overcome the obstacles as we worked on this project.
 
 ## Licenses:
 
@@ -50,7 +58,7 @@ This application offers a variety of features such as unique and sleek UI aided 
 
 Link to the repository [here](https://github.com/Simplyareed/Daily-Routine)
 
-Link to the deployed the deployed heroku application [here](...)
+Link to the deployed the deployed heroku application [here](https://evening-island-65599-8c8e55b840d3.herokuapp.com/)
 
 ## How to contribute:
 
