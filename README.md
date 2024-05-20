@@ -1,8 +1,22 @@
-# Daily-Routine
+# Exercise-Routine
 
 ## Description:
 
-This application was built to help users create a daily routine that works best for them and to measure their productivity throughout the week. Our motivation behind this project was a desire to hone our skills utilizing APIs, JavaScript, Handlebars, as well as the desire to aid people in navigating their busy, daily lives.
+This application was built to help users create an exercise routine that works best for them. Our motivation behind this project was a desire to hone our skills utilizing APIs, JavaScript, Handlebars, as well as the desire to aid people in implementing exercise into their lives to better their physical and mental health.
+
+## User story:
+
+As a user, I want to utilize an exercise routine application to manage my tasks efficiently as well as maintain productivity, update details, adjust priorities, and optimize my productivity throughout the day.
+
+## Acceptance Criteria:
+
+The login form should allow me to enter my email and password.
+
+Upon successful login, I should be redirected to my dashboard.
+
+Incorrect login attempts should display appropriate error messages.
+
+The dashboard should display a list of tasks for the current day.
 
 ## Installation:
 
@@ -30,7 +44,7 @@ No licensing available or necessary for this application.
 
 ## Features:
 
-This application offers a variety of features such as unique and sleek UI aided by boostrap and anime.js respectively, a graph to display user productivity, login and logout functionality, and a profile page for your viewing pleasure.
+This application offers a variety of features such as unique and sleek UI aided by boostrap respectively, login and logout functionality, and a profile page for your viewing pleasure.
 
 ## Links:
 
@@ -50,7 +64,7 @@ If you're interested in adding something to this application, follow these steps
 
 3. Make your changes and commit them:
 
-  If you're using git bash, use this command-- git commit -m 'Add some feature'
+   If you're using git bash, use this command-- git commit -m 'Add some feature'
 
 4. Push to that branch:
 
