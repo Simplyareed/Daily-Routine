@@ -40,7 +40,7 @@ app.use(routes);
 app.use(express.static('public'))
 
 // Use the API routes
-app.use('/api', apiRoutes);
+// app.use('/api', apiRoutes);
 
 // app.get('/dashboard', (req, res) => {
 //   res.render('dashboard', { title: 'Dashboard' });
@@ -56,6 +56,7 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login', { title: 'Login Page' });
+});
 
 // app.get('/', (req, res) => {
 //   res.render('login', { title: 'Login Page' });
