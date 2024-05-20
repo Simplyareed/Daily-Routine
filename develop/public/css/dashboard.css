@@ -105,3 +105,15 @@ button:hover {
     border-radius: 10px;
 
 }
+
+.completed-btn {
+    background-color: #004d78;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    margin: 10px;
+    margin-left: 146px;
+    margin-bottom: 70px;
+    padding: 10px;
+    width: 50%;
+}
