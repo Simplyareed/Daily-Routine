@@ -18,3 +18,31 @@ form{
     background-color: #4D869C;
     border: none;
 }
+
+/* Apply styles to the signup form specifically */
+#signup-form {
+    width: 28%;
+    margin: auto;
+    padding-top: 150px;
+}
+
+/* Ensure the background styling applies only to elements within the signup form */
+#signup-form .bg {
+    background-color: #FFEADD;
+}
+
+/* Apply button styling to buttons within the signup form */
+#signup-form .btn-color {
+    background-color: #4D869C;
+    border: none;
+}
+
+/* Apply general form control styling to inputs within the signup form */
+#signup-form .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
