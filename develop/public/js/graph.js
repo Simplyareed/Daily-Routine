@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             text: 'Weekly Productivity'
         },
         xAxis: {
-            categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            categories: ['']
         },
         yAxis: {
             title: {
