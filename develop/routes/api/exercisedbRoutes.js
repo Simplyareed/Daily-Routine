@@ -12,7 +12,7 @@ router.post('/searchexerciseforbodypart', async(req, res) => {
     const options = {
         method: 'GET',
         url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/'.concat(req.query.bodyPart.toLocaleLowerCase()),
-        params: {limit: '2'},
+        params: {limit: '1'},
         headers: {
             'X-RapidAPI-Key': process.env.EXERCISE_KEY,
             'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'

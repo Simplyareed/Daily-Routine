@@ -2,19 +2,88 @@ body {
     background-color: #7AB2B2;
 }
 
-/* everything currently width 100 as placeholder */
+h2 {
+    color: white;
+}
+
 .weekly-graph, .monthly-graph, .yearly-graph {
     width: 100%;
 }
 
 .exercise {
+    text-align: center;
     width: 100%;
+}
+
+.one-exercise {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #4f9e9e;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    text-transform: capitalize;
+    padding: 15px;
+}
+
+.exercise-target, .exercise-equipment {
+    font-size: large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.exercise-description {
+    text-transform: none;
+}
+
+.exercise-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-header button {
+    background-color: #004d78;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    padding: 10px;
+}
+
+.back {
+    position: absolute;
+    left: 360px;
+    top: 215px;
 }
 
 .routine {
+    text-align: center;
     width: 100%;
 }
 
-.nutrition {
-    width: 100%;
+.body-part {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    background-color: #4f9e9e;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.body-part button {
+    background-color: #004d78;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    margin: 10px;
+    margin-left: 146px;
+    padding: 10px;
+    width: 50%;
+}
+
+button:hover {
+    background-color: rgb(0, 99, 129);
 }

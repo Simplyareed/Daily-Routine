@@ -46,6 +46,7 @@ app.use('/api', apiRoutes);
 //   res.render('dashboard', { title: 'Dashboard' });
 // });
 
+
 app.get('/dashboard', (req, res) => {
   if (!req.session.loggedIn) {
     return res.redirect('/login');
@@ -55,6 +56,13 @@ app.get('/dashboard', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login', { title: 'Login Page' });
+
+// app.get('/', (req, res) => {
+//   res.render('login', { title: 'Login Page' });
+// });
+
+app.get('/', (req, res) => {
+  res.render('profile', { title: 'Profile' });
 });
 
 // make more get request and renders per the url's

@@ -20,10 +20,13 @@ body {
 }
 
 .footer {
-    text-align: center;;
+    display: flex;
+    background-color: #004d78;
+    justify-content: center;
 }
 
 .footer a {
-    display: inline;
+    display: flex;
+    justify-content: center;
     padding: 20px;
 }

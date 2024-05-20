@@ -12,7 +12,7 @@
         <!--main content-->
         <div class="row">
             <div class="col exercise">
-                <h1>Exercise</h1>
+                <h2>Exercise Generator</h2>
                 <div class="body-part">
                     <button>Back</button>
                     <button>Cardio</button>
@@ -25,27 +25,27 @@
                     <button>Upper Legs</button>
                     <button>Waist</button>
                 </div>
-                <div class="exercise-search">
-                    <input class="input" type="text" placeholder="enter body part exercised" spellcheck="false">
-                    <button></button>
+                <div class="one-exercise">
+                    <div class="exercise-header">
+                        <button class="back">Back</button>
+                        <h3 class="exercise-name">Name</h3>
+                    </div>
+                    <p class="exercise-target">Target</p>
+                    <p class="exercise-equipment">Equipment</p>
+                    <p class="exercise-description">Description</p>
+                    <img src="" class="exercise-gif">
                 </div>
             </div>
             <div class="col routine">
-                <h1>Daily Routine</h1>
+                <h2>Daily Routine</h2>
                 <!--div for graph to generate-->
                 <div class="weekly-graph"></div>
             </div>
-            <div class="col nutrition">
-                <h1>Nutrition?</h1>
-            </div>
-        </div>
-        <!--footer-->
-        <div class="row footer">
-            <p>Our GitHub Profiles</p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="anime.min.js"></script>
-    <script src="./js/api.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 </html>
