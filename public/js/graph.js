@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
             text: 'Weekly Productivity'
         },
         xAxis: {
-            categories: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+            categories: ['']
         },
         yAxis: {
             title: {
@@ -21,25 +21,25 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         series: [{
             name: 'Sunday',
-            data: []
+            data: [2]
         }, {
             name: 'Monday',
-            data: []
+            data: [3]
         }, {
             name: 'Tuesday',
-            data: []
+            data: [7]
         }, {
             name: 'Wednesday',
-            data: []
+            data: [4]
         }, {
             name: 'Thursday',
-            data: []
+            data: [1]
         }, {
             name: 'Friday',
-            data: []
+            data: [8]
         }, {
             name: 'Saturday',
-            data: []
+            data: [4]
         }
         ]
     })
